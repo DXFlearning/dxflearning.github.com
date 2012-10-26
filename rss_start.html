@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>SIA Dashboard</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="topbar"><span class="logout"><a href="login.html">Logout</a></span></div>
+	<div id="header">
+		<div id="menubar">
+	<ul>
+    <li><a href="index.html">Home</a></li>
+	<li><a href="resource.html">My Research Database</a></li>
+	<li>My RSS Feeds</li>
+	<li><a href="profile.html">My Profile</a></li>
+	</ul>
+	</div>
+<img src="images/logo.jpg" class="logo" />
+	<span class="title">ABC's Work Space</span>
+	</div>
+
+  <div id="content">
+	<h1>My RSS Feeds</h1>
+    
+        <form>
+          <table width="600" border="0" bgcolor="#eee">
+            <tr>
+              <td bgcolor="#EEE"><h2>Add a new RSS Feed</h2><hr /></td>
+            </tr>
+            <tr>
+              <td><table width="100%" border="0">
+                <tr>
+                  <td width="44%" height="81"><table width="100%" border="0">
+                    <tr>
+                      <td width="22%" height="30" align="right">Name:</td>
+                      <td width="78%"><input type="text" name="name" id="name" /></td>
+                    </tr>
+                    <tr>
+                      <td height="101" align="right">Select a Category:</td>
+                      <td><select name="category" size="5" multiple="multiple" id="category">
+                        <option>Advertising</option>
+                        <option>Brands</option>
+                        <option>Marketing</option>
+                        <option>Auto and Transportation</option>
+                        <option>Digital</option>
+                      </select>
+                      (Press Ctrl and click to select multiple.)</td>
+                    </tr>
+                    <tr>
+                      <td height="54" align="right">&nbsp;</td>
+                      <td><input name="add" type="submit" id="add" onclick="MM_goToURL('parent','rss.html');return document.MM_returnValue" value="Add" /></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                
+              </table></td>
+            </tr>
+          </table>
+         
+        </form>
+        <br />
+  </div>
+</div>
+</body>
+</html>
