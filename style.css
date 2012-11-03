@@ -142,6 +142,10 @@ hr {
 ul.project {
 	list-style-type: none;
 	}
+	
+p {
+	margin: 8px;
+	}
 
 /* This section is only for Profile page */	
 #profile {
@@ -304,4 +308,6 @@ h2.dashboardTitle {
 	
 .hidden { display: none; }
  .unhidden { display: block; }
+ 
+
 /* End of code for Dashboard pages */

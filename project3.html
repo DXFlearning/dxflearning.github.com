@@ -25,9 +25,48 @@ function moveOn() {
  }
  }
 
-
-// -->
+function MM_popupMsg(msg) { //v1.0
+  alert(msg);
+}
+//-->
 </script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script>
+$(document).ready(function() {
+		  $('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');					
+ 
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html('Show');
+        $("#user1").text("");
+        $("#pass1").text("");        
+        $("#user2").text("");
+        $("#pass2").text("");
+        }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html('Hide');
+        $("#user1").text("abcd");
+        $("#pass1").text("1234");        
+        $("#user2").text("abcd");
+        $("#pass2").text("1234");
+			  }
+			});
+		  });
+ 
+		});
+function MM_goToURL() { //v3.0
+  var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+  for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+    </script>
+
+
 </head>
 
 <body>
@@ -118,8 +157,8 @@ function moveOn() {
     </tr>
     <tr>
       <td>Attach a File: 
-        <input type="text" name="file" id="file" />
-        <input type="submit" name="browse" id="browse" value="Browse" /></td>
+        
+        <input type="file" name="browse" id="browse" value="Browse" /></td>
     </tr>
     <tr>
       <td align="center"><input type="submit" name="save" id="save" value="Save" /></td>
@@ -179,7 +218,7 @@ function moveOn() {
   <tr>
     <td>&nbsp;</td>
     <td height="40">&nbsp;</td>
-    <td><input type="button" name="button2" id="button2" value="Save Report LIst" onclick="location.href = 'index_final.html';" /> <input type="button" name="button3" id="button3" value="Send Selected Reports to Client" onclick="location.href = 'email_report.html';" /></td>
+    <td><input type="button" name="button2" id="button2" value="Save Report LIst" onclick="location.href = 'index_final.html';" /> <input type="button" name="button3" id="button3" value="Send Selected Reports to Client" onclick="location.href = 'final_review.html';" /></td>
   </tr>
 </table>
 </form>
@@ -191,7 +230,7 @@ function moveOn() {
 <div id="search">
 <form>
 <input name="" type="text" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_resource.html');return document.MM_returnValue" value="Search" />
 </form>
 </div>
 <div class="clear"></div>
@@ -205,8 +244,12 @@ function moveOn() {
 </ul>
 
 <h3>Subscription/Registration Required</h3>
-<p  class="show">Show/Hide User ID & Password</p>
-<input type="submit" name="button" id="button" value="Show" />
+<div><p  class="show">Show/Hide User ID & Password</p>
+				<button href="#collapse1" class="nav-toggle">Show</button>
+			</div>
+			<div id="collapse1" style="display:none">
+
+			</div>
 <div class="clear"></div>
 
 <form>
@@ -218,24 +261,14 @@ function moveOn() {
     <td><strong>Password</strong></td>
   </tr>
   <tr>
-    <td bgcolor="#FFFFFF"><a href="http://adage.com/" target="_blank">Advertising Age</a></td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
+    <td><a href="http://adage.com/" target="_blank">Advertising Age</a></td>
+    <td><div id="user1"></div></td>
+    <td><div id="pass1"></div></td>
   </tr>
   <tr>
-    <td><a href="http://online.wsj.com/home-page" target="_blank">The Wall Street Journal</a></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF"><a href="http://www.strategy-business.com/" target="_blank">strategy + business</a></td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.nielsen.com/us/en.html" target="_blank">Nielsen</a></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td><a href="http://www.Nielsen.com/us/en.html" target="_blank">Nielsen</a></td>
+    <td> <div id="user2"></div></td>
+    <td><div id="pass2"></div></td>
   </tr>
   </table>
   </center>
@@ -248,15 +281,19 @@ function moveOn() {
 <div id="rightColumn">
 
 <div id="task">
-<span class="manage"><a href="project1.html">Add New Task</a></span>
+<span class="manage"><a href="javascript:unhide('addTask');">Add New Task</a></span>
 <h2 class="dashboardTitle">My Tasks</h2>
+<div id="addTask" class="hidden" style="text-align:center; border:1px solid #ccc; margin:2px;">
+Create New Task<br />
+<input type="text" name="task" id="task2" />
+<input name="add" type="button" id="add" onclick="location.href='project2.html';" value="Add" />
+</div>
 
 <form>
 <span class="task">
 Set Timer: <br /><select name="timer">
   <option>Search info on Google</option>
-  <option>Search info on Factiva</option>
-  <option>Search info on NexisLexis</option>
+  <option selected="selected">Search info on Factiva</option>
   <option>Review search results</option>
   <option>Compose email message</option>
 </select>
@@ -298,7 +335,7 @@ for <select name="time">
   <option>Min</option>
   <option>Hr</option>
 </select>
-<input type="submit" name="button4" id="button4" value="Start" /></span>
+<input name="save2" type="button" id="save2" onclick="MM_popupMsg('When the time you set is up, this window will pop up and with a message that reminds the user it is time to move on to the next task.')" value="Start" /></span>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr bgcolor="#f2f2f2">
     <td width="2%">&nbsp;</td>
@@ -346,8 +383,8 @@ for <select name="time">
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
-    <td height="40"><input type="submit" name="save2" id="save2" value="Save Change" /></td>
-    <td>&nbsp;</td>
+    <td height="40" align="center"><input type="submit" name="save3" id="save3" value="Save Change" /></td>
+    <td><input type="submit" name="button4" id="button4" value="Cancel" /></td>
   </tr>
 </table>
 </form>
@@ -371,7 +408,7 @@ for <select name="time">
 <div id="search">
 <form> 
   <input name="" type="text" size="10" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_rss.html');return document.MM_returnValue" value="Search" />
   </form>
   </div>
  <div class="clear"></div> 

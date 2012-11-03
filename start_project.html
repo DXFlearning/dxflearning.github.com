@@ -97,7 +97,7 @@ function MM_goToURL() { //v3.0
 <form>
   <table width="400" border="0" cellpadding="3" cellspacing="3">
     <tr>
-      <td><textarea name="report" cols="50" rows="5" id="report2"></textarea></td>
+      <td><textarea name="report" cols="50" rows="5" id="report2">You can copy and paste your findings here.</textarea></td>
     </tr>
     <tr>
       <td>Tag(s): 
@@ -108,8 +108,8 @@ function MM_goToURL() { //v3.0
     </tr>
     <tr>
       <td>Attach a File: 
-        <input type="text" name="file" id="file" />
-        <input type="submit" name="browse" id="browse" value="Browse" /></td>
+        
+        <input type="file" name="browse" id="browse" value="Browse" /></td>
     </tr>
     <tr>
       <td align="center"><input name="save" type="submit" id="save" onclick="MM_goToURL('parent','project1.html');return document.MM_returnValue" value="Save" /></td>
@@ -126,7 +126,7 @@ Research Database</h2>
 <div id="search">
 <form> 
   <input name="" type="text" size="10" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_resource.html');return document.MM_returnValue" value="Search" />
   </form>
   </div>
 
@@ -225,7 +225,7 @@ Research Database</h2>
 <div id="search">
 <form> 
   <input name="" type="text" size="10" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_rss.html');return document.MM_returnValue" value="Search" />
   </form>
   </div>
  <div class="clear"></div> 

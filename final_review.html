@@ -6,17 +6,12 @@
 <link href="style.css" rel="stylesheet" type="text/css" />
 <script language="javascript" type="text/javascript">
 <!--
-function popitup(url) {
-	var newwindow=window.open(url,'search_pop.html','height=600,width=800');
-	newwindow.onload = function() {newwindow.popupMoveOn = moveOn;}
-	if (window.focus) {newwindow.focus()}
-	return false;
-}
-
-function moveOn() {
-	console.log('moving on');
-	window.location.replace('project3.html');
-}
+ function unhide(divID) {
+ var item = document.getElementById(divID);
+ if (item) {
+ item.className=(item.className=='hidden')?'unhidden':'hidden';
+ }
+ }
 
 function MM_goToURL() { //v3.0
   var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
@@ -47,7 +42,7 @@ function MM_goToURL() { //v3.0
     <div id="project">
 
 <ul class="menu">
-<li class="menu">Edit Project Settings</li>
+<li class="menu"><a href="javascript:unhide('editProject');">Edit Project Settings</a></li>
 <li class="menu"><a href="index.html">Start a New Project</a></li>
 </ul>
 
@@ -57,6 +52,43 @@ function MM_goToURL() { //v3.0
 <li><strong>Due Date</strong>: 10/20/2012</li>
 <li><strong>Project Owner</strong>: ABC</li>
 </ul>
+
+<div id="editProject" class="hidden">
+<form>
+<h3>Edit Project Settings</h3>
+<table width="100%" border="0" cellspacing="2" cellpadding="2">
+      <tr>
+        <td width="5%">&nbsp;</td>
+        <td width="18%">Project Name:</td>
+        <td width="22%"><input name="project_name5" type="text" id="project_name5" value="Omni Advertising Trend" size="30"/></td>
+        <td width="8%">Owner:</td>
+        <td width="47%"><input name="project_name6" type="text" id="project_name6" value="ABC" /></td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>Category: </td>
+        <td><select name="select2" id="select2">
+          <option selected="selected">Advertising</option>
+          <option>Brands</option>
+          <option>Marketing</option>
+          <option>Auto and Transportation</option>
+          <option>Digital</option>
+        </select></td>
+        <td>Due Date: </td>
+        <td><input name="project_name7" type="text" id="project_name7" value="10/20/2012" />
+          <img src="images/icon_calendar.png" width="20" height="20" alt="Calendar" /></td>
+        </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input name="Start2" type="button" id="Start2" onclick="MM_goToURL('parent','start_project.html');return document.MM_returnValue" value="Save" /></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        </tr>
+    </table>
+ </form>   
+    </div>
+
 </div>
 <p>
 
@@ -113,7 +145,7 @@ function MM_goToURL() { //v3.0
     <td>&nbsp;</td>
     <td height="40">&nbsp;</td>
     <td><input name="button5" type="submit" id="button5" onclick="MM_goToURL('parent','project3.html');return document.MM_returnValue" value="Do More Research" />
-      <input type="submit" name="button5" id="button6" value="Next" /></td>
+      <input name="button5" type="submit" id="button6" onclick="MM_goToURL('parent','email_report.html');return document.MM_returnValue" value="Next" /></td>
   </tr>
 </table>
 </form>
