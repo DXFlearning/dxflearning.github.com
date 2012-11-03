@@ -67,6 +67,7 @@ function MM_goToURL() { //v3.0
     </script>
 
 
+
 </head>
 
 <body>
@@ -215,7 +216,7 @@ function MM_goToURL() { //v3.0
 <div id="search">
 <form>
 <input name="" type="text" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_resource.html');return document.MM_returnValue" value="Search" />
 </form>
 </div>
 <div class="clear"></div>
@@ -229,8 +230,13 @@ function MM_goToURL() { //v3.0
 </ul>
 
 <h3>Subscription/Registration Required</h3>
-<p  class="show">Show/Hide User ID & Password</p>
-<input type="submit" name="button" id="button" value="Show" />
+
+<div><p  class="show">Show/Hide User ID & Password</p>
+				<button href="#collapse1" class="nav-toggle">Show</button>
+			</div>
+			<div id="collapse1" style="display:none">
+
+			</div>
 <div class="clear"></div>
 
 <form>
@@ -252,7 +258,6 @@ function MM_goToURL() { //v3.0
     <td><div id="pass2"></div></td>
   </tr>
   </table>
-
   </center>
 </form>
 
@@ -383,7 +388,7 @@ for <select name="time">
 <div id="search">
 <form> 
   <input name="" type="text" size="10" />
-<input type="submit" name="button" id="button" value="Search" />
+<input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_rss.html');return document.MM_returnValue" value="Search" />
   </form>
   </div>
  <div class="clear"></div> 
