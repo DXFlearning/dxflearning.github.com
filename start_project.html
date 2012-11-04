@@ -19,6 +19,39 @@ function MM_goToURL() { //v3.0
  }
 
 </script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.nav-toggle').click(function(){
+			//get collapse content selector
+			var collapse_content_selector = $(this).attr('href');					
+ 
+			//make the collapse content to be shown or hide
+			var toggle_switch = $(this);
+			$(collapse_content_selector).toggle(function(){
+			  if($(this).css('display')=='none'){
+                                //change the button label to be 'Show'
+				toggle_switch.html('Show');
+        $("#user1").text("");
+        $("#pass1").text("");        
+        $("#user2").text("");
+        $("#pass2").text("");
+        }else{
+                                //change the button label to be 'Hide'
+				toggle_switch.html('Hide');
+        $("#user1").text("abcd");
+        $("#pass1").text("1234");        
+        $("#user2").text("abcd");
+        $("#pass2").text("1234");
+			  }
+			});
+		  });
+ 
+		});	
+</script>
+
+
 </head>
 
 <body>
@@ -141,8 +174,12 @@ Research Database</h2>
 </ul>
 
 <h3>Subscription/Registration Required</h3>
-<p  class="show">Show/Hide User ID & Password</p>
-<input type="submit" name="button" id="button" value="Show" />
+<div><p  class="show">Show/Hide User ID & Password</p>
+				<button href="#collapse1" class="nav-toggle">Show</button>
+			</div>
+			<div id="collapse1" style="display:none">
+
+			</div>
 <div class="clear"></div>
 
 <form>
@@ -154,29 +191,18 @@ Research Database</h2>
     <td><strong>Password</strong></td>
   </tr>
   <tr>
-    <td bgcolor="#FFFFFF"><a href="http://adage.com/" target="_blank">Advertising Age</a></td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
+    <td><a href="http://adage.com/" target="_blank">Advertising Age</a></td>
+    <td><div id="user1"></div></td>
+    <td><div id="pass1"></div></td>
   </tr>
   <tr>
-    <td><a href="http://online.wsj.com/home-page" target="_blank">The Wall Street Journal</a></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-  </tr>
-  <tr>
-    <td bgcolor="#FFFFFF"><a href="http://www.strategy-business.com/" target="_blank">strategy + business</a></td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-    <td bgcolor="#FFFFFF">&nbsp;</td>
-  </tr>
-  <tr>
-    <td><a href="http://www.nielsen.com/us/en.html" target="_blank">Nielsen</a></td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
+    <td><a href="http://www.Nielsen.com/us/en.html" target="_blank">Nielsen</a></td>
+    <td> <div id="user2"></div></td>
+    <td><div id="pass2"></div></td>
   </tr>
   </table>
   </center>
 </form>
-
 </div>
 
 </div>
