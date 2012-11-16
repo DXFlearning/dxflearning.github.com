@@ -131,9 +131,9 @@ function MM_goToURL() { //v3.0
 Reports </td>
     <td width="78" align="right"><img src="images/button_on1.png" alt="" width="56" height="20" /></td>
     <td width="123" align="center">Research Database</td>
-    <td width="79" align="right"><a href="project1_no_task_rss.html"><img src="images/button_on.png" alt="" width="56" height="20" border="0" /></a></td>
+    <td width="79" align="right"><a href="project2.html"><img src="images/button_off.png" alt="" width="56" height="20" border="0" /></a></td>
     <td width="50" align="center">Tasks</td>
-    <td width="79" align="right"><a href="project1.html"><img src="images/button_off.png" alt="" width="56" height="20" border="0" /></a></td>
+    <td width="79" align="right"><a href="project2_no_task_rss.html"><img src="images/button_on.png" alt="" width="56" height="20" border="0" /></a></td>
     <td width="78" align="center"> RSS Feeds</td>
     <td width="174" align="center">&nbsp;</td>
   </tr>
@@ -243,32 +243,53 @@ Reports </td>
 	</div>
     
    <div id="rightColumn">
+     <div id="rss">
+       <h2 class="dashboardTitle">RSS Feeds</h2>
+        <div id="select">
+        <form>
+        <select name="">
+          <option>Advertising Age</option>
+          <option>Adweek</option>
+          <option selected="selected">The New York Times</option>
+          <option>MediaPost</option>
+          </select>
+          </form>
+          </div>
+        <div id="search">
+        <form> 
+          <input name="" type="text" size="10" />
+        <input name="button" type="submit" id="button" onclick="MM_goToURL('parent','search_rss.html');return document.MM_returnValue" value="Search" />
+          </form>
+          </div>
+         <div class="clear"></div> 
+          <ul>
+          <li><strong>Giving Leftovers a New Place at the Table</strong><br />
+          By CHRISTINE HAUGHNEY, Today at 10:40AM<br />
+          With her images of half-nibbled sweets and crumb-strewn tablecloths, Laura Letinsky has taken the discussion on photography to a different realm: food.  <a href="http://www.nytimes.com/2012/10/10/arts/design/laura-letinskys-food-photography.html?pagewanted=all&amp;_r=0" target="_blank">Read more...</a></li>
+          <li><strong>Willie Geist Is Named Co-Host of 'Today'</strong><br />
+          By BRIAN STELTER, Today at 10:10AM<br />
+          BC confirmed Wednesday that Willie Geist, the MSNBC newsman and occasional comedian, would become a permanent presence on "Today." <a href="http://mediadecoder.blogs.nytimes.com/2012/10/10/willie-geist-is-named-co-host-of-9-a-m-hour-of-today/" target="_blank">Read more...</a></li>
+          <li><strong>In Sweetener Campaign, Nature Is the Star</strong><br />
+          By STUART ELLIOTT, Today at 9:30AM<br />
+          A broad advertising campaign for the natural sweetener Truvia emphasizes the product's origins: the leaves of the stevia plant.  <a href="http://www.nytimes.com/2012/10/10/business/media/in-sweetener-ads-cargill-focuses-on-truvias-roots.html" target="_blank">Read more...</a></li>
+          <li><a href="javascript:unhide('moreArticles');">More Articles</a></li>
+          <div id="moreArticles" class="hidden">
+          <li><strong>Campaign Tries to Help Defuse Bullying</strong><br />
+          By ELIZABETH OLSON, Today at 9:10AM<br />
+          The &ldquo;Be More Than a Bystander&rdquo; campaign, orchestrated by the nonprofit Advertising Council, underscores the problem of bullying with a series of television, print and online ads.<a href="http://www.nytimes.com/2012/10/24/business/media/campaign-tries-to-help-defuse-bullying.html" target="_blank">Read more...</a></li>
+          <li><strong>Media Decoder Blog: Mel Karmazin to Step Down as Chief of Sirius</strong><br />
+          By BEN SISARIO, Today at 8:50AM<br />
+          His departure, scheduled for Feb. 1, comes as Sirius XM Radio prepares to be taken over by Liberty Media, its biggest investor. <a href="http://mediadecoder.blogs.nytimes.com/2012/10/10/willie-geist-is-named-co-host-of-9-a-m-hour-of-today/" target="_blank">Read more...</a></li>
+          <li><strong>Lessons for Madison Avenue From ‘Real-Time’ Olympics</strong><br />
+          By STUART ELLIOTT, Today at 8:10AM<br />
+          At a panel discussion about marketing during the OIympics, the focus was on the opportunities from the growth of social media and the rise of &quot;second screen&quot; use by viewers of the Games. <a href="http://mediadecoder.blogs.nytimes.com/2012/10/10/willie-geist-is-named-co-host-of-9-a-m-hour-of-today/" target="_blank">Read more...</a></li>
+          </div>
+          </ul>
+     </div>
 
-		<div id="task">
- 		 <h2 class="dashboardTitle">My Tasks</h2>
-		<form>
- 		 <table width="400" border="0">
-    <tr>
-      <td>Create Task(s): </td>
-    </tr>
-    <tr>
-      <td align="center"><input type="text" name="task" id="task2" /></td>
-    </tr>
-    <tr>
-      <td align="center"><input type="text" name="task2" id="task3" /></td>
-    </tr>
-    <tr>
-      <td align="center"><input type="text" name="task3" id="task4" /></td>
-    </tr>
-    <tr>
-      <td align="center"><input name="add" type="button" id="add" onclick="MM_goToURL('parent','project2.html');return document.MM_returnValue" value="Add" /></td>
-    </tr>
-  </table>
 
-</form>
-
+       
 </div>
-   </div>
 </div>
 </body>
 </html>
