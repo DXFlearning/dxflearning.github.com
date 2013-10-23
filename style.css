@@ -1,3 +1,17 @@
+@font-face {
+	font-family: 'MuseoSans-500';
+	src: url('webfonts/26074C_0_0.eot');
+	src: url('webfonts/26074C_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/26074C_0_0.woff') format('woff'),url('webfonts/26074C_0_0.ttf') format('truetype');
+	}
+ 
+  
+@font-face {
+	font-family: 'MuseoSans-500Italic';
+	src: url('webfonts/26074C_1_0.eot');
+	src: url('webfonts/26074C_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/26074C_1_0.woff') format('woff'),url('webfonts/26074C_1_0.ttf') format('truetype');
+	}
+
+
 body {
 	padding: 0;
 	margin: 0;
@@ -147,167 +161,3 @@ p {
 	margin: 8px;
 	}
 
-/* This section is only for Profile page */	
-#profile {
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2) );
-    background: -moz-linear-gradient(-90deg, #fff, #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2');
-	border: 1px solid #369;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-
-	}
-	
-#profileSide {
-	width: 25%;
-	float: left;
-	text-align: center;
-	}
-
-/* End of profile section */
-
-/* This section is only for Dashboard pages */
-
-#project {
-	display: block;
-	background-color: #f2f2f2;
-	padding: 5px;
-	font-size: .95em;
-
-	}
-	
-#project ul{
-	list-style-type: none;
-	margin: 2px;
-	padding: 2px;
-	}
-	
-#project li {
-	display: inline;
-	padding: 2px;
-	margin: 2px;
-	}
-	
-#project a {
-	color: #fff;
-	text-decoration: none;
-}
-
-
-ul.menu {
-	float: right;
-	}
-	
-li.menu {
-	border: 1px solid #369;
-	background-color: #7099c5;
-	color: #fff;
-	font-size: .8em;
-	font-weight: bold;
-	text-align: center;
-	}
-
-h2.dashboardTitle {
-	margin: 0;
-	padding: 3px 6px;
-	font-size:1.2em;
-	color:#000000;
-	font-weight: bold;
-	display: block;
-	background-color: #ccc;
-	}
-	
-.manage a{
-	margin: 2px 8px;
-	float: right;
-	}
-
-#report {
-	margin: 5px 5px 5px 0;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2) );
-    background: -moz-linear-gradient(-90deg, #fff, #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2');
-	border: 1px solid #369;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	}
-	
-#task {
-	margin: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2) );
-    background: -moz-linear-gradient(-90deg, #fff, #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2');
-	border: 1px solid #369;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	}
-	
-.task {
-	margin: 5px 2px 2px 5px;
-	padding: 5px;
-	border: 1px solid #999;
-	display: block;
-	}
-
-
-.clear { clear: both;}
-
-#resource {
-	margin: 15px 5px 5px 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2) );
-    background: -moz-linear-gradient(-90deg, #fff, #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2');
-	border: 1px solid #369;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	}
-
-.show {
-	margin: 2px 20px;
-	float: left;
-	}
-	
-#rss {
-	margin: 15px 5px 5px 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f2f2f2) );
-    background: -moz-linear-gradient(-90deg, #fff, #f2f2f2);
-    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fff', endColorstr='#f2f2f2');
-	border: 1px solid #369;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	border-radius: 6px;
-	}
-
-#search {
-	margin: 5px;
-	padding: 2px;
-	float: right;
-	}
-	
-#select {
-	margin: 5px;
-	padding: 2px;
-	float: left;
-	}
-	
-#leftColumn {
-	width: 48%;
-	margin-top: 15px;
-	float: left;
-	}
-	
-#rightColumn {
-	width: 48%;
-	margin-top: 15px;
-	float: right;
-	}
-	
-.hidden { display: none; }
- .unhidden { display: block; }
- 
-
-/* End of code for Dashboard pages */
