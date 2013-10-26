@@ -136,11 +136,11 @@ h3 {
 	}
 	
 p {
-	margin: 10px 15px;
+	margin: 10px 15px 10px 0;
 	}
 	
 .date {
-	margin: auto 15px;
+	margin: auto 15px auto 0;
 	color: #666;
 	display: block;
 	border-bottom: solid 1px #f8f8f8;
