@@ -20,7 +20,7 @@ html, body, h1, h2{
 body {
 	font-family: 'MuseoSans-500',Calibri,sans-serif;
 	color: #333;
-	font-size: .95em;
+	font-size: .9em;
 
 }
 
@@ -35,7 +35,16 @@ a:visited {
 #wrapper {
 	width: 100%;
 	margin: 0 auto;
+	padding: 8px;
 	max-width: 960px;
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(238,238,238,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
 	}
 
 
@@ -106,20 +115,24 @@ li.currentmenu {
 	}
 
 h1 {
-	padding: 15px;
+	margin: 15px;
+	padding: 5px 0;
 	font-size:2em;
 	line-height:39px;
 	letter-spacing:-1px;
 	}
 	
 h2 {
-	padding: 5px 15px;
+	color: #060;
+	margin: 20px 15px 5px 15px;
+	padding: 5px 0;
 	font-size:1.2em;
 	font-weight: bold;
 	}
 
 h3 {
-	padding: 5px 15px;
+	margin: 5px 15px;
+	padding: 5px 0;
 	font-size:1em;
 	font-weight: bold;
 	display: block;
@@ -130,8 +143,10 @@ p {
 	}
 	
 .date {
-	margin-left: 15px;
+	margin: auto 15px;
 	color: #666;
+	display: block;
+	border-bottom: solid 1px #f8f8f8;
 	}
 
 #content {
@@ -145,7 +160,11 @@ p {
 	
 img {
 	border: solid 1px #eee;
+	float: left;
+	margin: 10px 15px;
 	}
 
-	
+.clear {
+	clear: both;
+	}	
 
