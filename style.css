@@ -116,7 +116,6 @@ li.currentmenu {
 
 h1 {
 	margin: 15px;
-	padding: 5px 0;
 	font-size:2em;
 	line-height:39px;
 	letter-spacing:-1px;
@@ -125,14 +124,12 @@ h1 {
 h2 {
 	color: #060;
 	margin: 20px 15px 5px 15px;
-	padding: 5px 0;
 	font-size:1.2em;
 	font-weight: bold;
 	}
 
 h3 {
 	margin: 5px 15px;
-	padding: 5px 0;
 	font-size:1em;
 	font-weight: bold;
 	display: block;
@@ -151,7 +148,7 @@ p {
 
 #content {
 	margin-top: 10px;
-	padding: 0;
+	padding: 10px;
 }
 
 #content li {
