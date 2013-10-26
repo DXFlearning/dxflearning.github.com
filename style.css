@@ -123,13 +123,15 @@ h1 {
 	
 h2 {
 	color: #060;
-	margin: 20px 15px 5px 0;
+	margin: 15px 15px 5px 0;
+	padding-top: 10px;
 	font-size:1.2em;
 	font-weight: bold;
-	}
+	border-top: solid 1px #f8f8f8;
+}
 
 h3 {
-	margin: 5px 15px 5px 0;
+	margin: 15px 15px 5px 0;
 	font-size:1em;
 	font-weight: bold;
 	display: block;
@@ -143,7 +145,6 @@ p {
 	margin: auto 15px auto 0;
 	color: #666;
 	display: block;
-	border-bottom: solid 1px #f8f8f8;
 	}
 
 #content {
@@ -158,10 +159,19 @@ p {
 img {
 	border: solid 1px #eee;
 	float: left;
-	margin: 10px 15px;
+	margin: 10px 25px 30px 0;
 	}
+	
+img.right {
+	float: right;
+	margin: 10px 10px 30px 20px;
+}
 
 .clear {
 	clear: both;
+	}
+	
+ul, li {
+	padding: 5px 15px;
 	}	
 
