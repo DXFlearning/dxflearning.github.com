@@ -32,11 +32,21 @@ a:visited {
 	color: #53A2F4;
 }
 
+
+#container { 
+	min-height: 100%;
+	width: 100%;
+	background-color: #fff;
+	}
+	
+
 #wrapper {
 	width: 100%;
 	margin: 0 auto;
 	padding: 8px;
 	max-width: 960px;
+	overflow: auto;
+	padding-bottom: 3em;	
 	background: rgb(238,238,238); /* Old browsers */
 	background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(238,238,238,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
@@ -123,7 +133,7 @@ h1 {
 	
 h2 {
 	color: #060;
-	margin: 15px 15px 5px 0;
+	margin: 40px 15px 5px 0;
 	padding-top: 10px;
 	font-size:1.2em;
 	font-weight: bold;
@@ -175,3 +185,27 @@ ul, li {
 	padding: 5px 15px;
 	}	
 
+/* This section is for Footer */
+
+#footer {
+	position: relative;
+	margin-top: -3em; 
+	height: 3em;
+	clear:both;
+	background-color: #7e7e7e;
+}
+	
+.note {
+	margin: 0;
+	padding: 8px;
+	text-align: center;
+	color: #fff;
+	}
+	
+.note a {
+	color: #fff;
+	}	
+	
+p.footer {
+	font-size: .8em;
+	}
